@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title></title>
+  <style>
+    body {
+      background: #E8E9F3;
+    }
+  </style>
+</head>
+<body>
+ <!-- Authentication -->
+ <div class="authentication invisible">
+  <input type="email" placeholder="Email" id="email">
+  <input type="password" placeholder="Password" id="password">
+  <button id="btnLogin" class="btn btn-primary">Log In</button>
+  <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+</div>
+<!--Container & Title-->
+<div class="chat-container invisible">
+<h1 class="my-4 text-center">Chat</h1>
+
+  <div class="messages-container">
+    <!--Buttons for chatroom-->
+    <div class="chat-rooms mb-3 text-center">
+      <div class="my-2">Chatroom:</div>
+      <button class="btn active" id="general">#general</button>
+      <button class="btn" id="gaming">#gaming</button>
+      <button class="btn" id="music">#music</button>
+      <button class="btn" id="books">#books</button>
+    </div>
+
+    <!--Chat list-->
+    <div class="chat-window">
+      <div class="no-messages invisible">No messages to display<br>Start a new chat!</div>
+      <ul class="chat-list list-group"></ul>
+    </div>
+  </div>
+  <div class="input-container">
+    <!--New chat form-->
+    <form class="new-chat my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">New message:</div>
+        </div>
+        <input type="text" class="form-control" id="message" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn send" value="send">
+        </div>
+      </div>
+    </form>
+
+    <!--Update name form-->
+    <form class="new-name my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Update name:</div>
+        </div>
+        <input type="text" class="form-control" id="name" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn send" value="update">
+        </div>
+      </div>
+      <div class="update-mssg"></div>
+    </form>
+
+    <!-- Log out button --> 
+    <button id="btnLogout" class="btn btn-action">Log Out</button>
+  </div>
+</div>
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+  <script>
+  var firebaseConfig = {
+      apiKey: "AIzaSyDDrIEY1Z1IbdPLvZD9NU9Gv7Gx4icx0Qk",
+      authDomain: "udemy-course-eeebb.firebaseapp.com",
+      databaseURL: "https://udemy-course-eeebb.firebaseio.com",
+      projectId: "udemy-course-eeebb",
+      storageBucket: "udemy-course-eeebb.appspot.com",
+      messagingSenderId: "455121994762",
+      appId: "1:455121994762:web:1e3af04345e3e6e3c1cbf3"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const auth = firebase.auth();
+  </script>
+  <script src="assets/bundle.js"></script>
+</body>
+</html>
