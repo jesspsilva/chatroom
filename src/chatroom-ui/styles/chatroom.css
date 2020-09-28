@@ -1,0 +1,136 @@
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.messages-container {
+    max-height: 424px;
+    height: auto;
+    background: #02111b;
+}
+
+.messages-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.messages-container .chat-rooms{
+    float: left;
+    color: #fff;
+    width: 20%;
+}
+
+.chat-container .chat-window {
+    text-align: left;
+    max-height: 424px;
+    overflow-y: auto;
+}
+
+.chat-container .chat-window .no-messages {
+    background: #02111b;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.messages-container .list-group-item{
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    background: #fff;
+}
+
+.messages-container .list-group-item.user-messages{
+    background: #eee;
+}
+
+.chat-container .messages-container .btn {
+    background: #fff;
+    color: #5d737e;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.chat-container .messages-container .btn.active {
+    color: #fff;
+    background: #5d737e;
+}
+
+.input-container {
+    background: #02111b;
+    padding: 20px;
+}
+
+.input-container .input-group-text {
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.input-container .input-group input[type="text"] {
+    background: transparent !important;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.input-container .input-group input.btn,
+.chat-container #btnLogout {
+    background: #5d737e;
+    color: #fff;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0.25rem !important;
+    margin-left: 20px;
+}
+
+
+.chat-container .form-control:focus,
+.chat-container .btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.chat-container .username{
+    font-weight: bold;
+}
+.chat-container .time{
+    font-size: 0.7em;
+    color: #999;
+}
+.chat-container .update-mssg{
+    text-align: center;
+    margin: 20px auto;
+    color: #fff;
+}
+
+@media (min-width: 1px) and (max-width: 320px) {
+    .messages-container .chat-rooms {
+        float: none;
+        width: 100%;
+    }
+
+    .input-container .input-group {
+        flex-direction: column;
+    }
+
+    .input-container .input-group-text {
+        padding: 0;
+    }
+
+    .input-container .input-group input[type="text"] {
+        width: 100%;
+    }
+
+    .input-container .input-group input.btn,
+    .chat-container #btnLogout {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+}
