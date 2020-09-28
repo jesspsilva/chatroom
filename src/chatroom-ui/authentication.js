@@ -41,6 +41,8 @@ btnSignUp.addEventListener('click', e => {
     promise.catch(e => {
         if(e.code == "auth/email-already-in-use"){
             error.show(e.message);
+        } else if (e.code == "auth/invalid-email"){
+            error.show('Invalid email');
         }
         console.log(e);
     });
