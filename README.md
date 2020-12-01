@@ -1,7 +1,5 @@
-# Chatroom
+# :speech_balloon: Chatroom
  Development of a chatroom with Firebase
-
-## Link: https://jesspsilva.github.io/chatroom/
  
  Languages:
 
@@ -14,3 +12,6 @@
  
  - Firebase
  - Babel
+ 
+ ## :fire: Try it
+https://jesspsilva.github.io/chatroom/
